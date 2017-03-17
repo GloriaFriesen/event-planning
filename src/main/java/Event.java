@@ -8,6 +8,7 @@ public class Event {
   private Integer mDrinkPrice;
   private Integer mEntertainmentPrice;
   private Integer mCoupon;
+  private Integer mPartyPrice;
 
   public Event(int guest){
     mGuest = guest;
@@ -69,13 +70,19 @@ public class Event {
         mCoupon = -150;
       }
       return mCoupon;
-    } 
+    }
     return mCoupon;
   }
 
   public Integer calculatePartyPrice(int foodIndex, int drinkIndex, int entertainmentIndex){
     Integer partyPrice = 0;
     partyPrice += getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex);
-    return partyPrice;
+    return mPartyPrice;
+  }
+
+  public Integer calculateDiscountedPrice(int foodIndex, int drinkIndex, int entertainmentIndex, String couponCode) {
+    Integer partyPriceDiscounted = 0;
+    partyPriceDiscounted = getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex) + getCoupon(couponCode);
+    return partyPriceDiscounted;
   }
 }
