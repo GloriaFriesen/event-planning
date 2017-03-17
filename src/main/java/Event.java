@@ -42,4 +42,19 @@ public class Event {
     return drinkPrice;
   }
 
+  public Integer getEntertainmentPrice(int entertainmentIndex) {
+    Integer entertainmentPrice = 0;
+    String[] entertainmentOptions = {"magician", "dj", "karaoke", "petting zoo"};
+
+    if ( entertainmentOptions[entertainmentIndex].equals("magician") ) {
+      return entertainmentPrice += 200;
+    } else if ( entertainmentOptions[entertainmentIndex].equals("dj") ) {
+      return entertainmentPrice += 450;
+    } else if ( entertainmentOptions[entertainmentIndex].equals("karaoke") ) {
+      return entertainmentPrice += 50;
+    } else if ( entertainmentOptions[entertainmentIndex].equals("petting zoo") ) {
+      return entertainmentPrice += 600;
+    }
+    return entertainmentPrice;
+  }
 }

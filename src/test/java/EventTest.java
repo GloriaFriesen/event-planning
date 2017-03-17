@@ -19,10 +19,24 @@ public class EventTest {
   }
 
   @Test
-  public void getFoodPrice_changePriceFoodChoice_Integer(){
+  public void getFoodPrice_findFoodPriceForBurrito_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 20 * 8;
+    assertEquals(expectedOutput, testEvent.getFoodPrice(0));
+  }
+
+  @Test
+  public void getFoodPrice_findFoodPriceForPizza_Integer(){
     Event testEvent = new Event(20);
     Integer expectedOutput = 20 * 10;
     assertEquals(expectedOutput, testEvent.getFoodPrice(1));
+  }
+
+  @Test
+  public void getFoodPrice_findFoodPriceForIceCream_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 20 * 6;
+    assertEquals(expectedOutput, testEvent.getFoodPrice(2));
   }
 
   @Test
@@ -30,5 +44,12 @@ public class EventTest {
     Event testEvent = new Event(20);
     Integer expectedOutput = 20 * 12;
     assertEquals(expectedOutput, testEvent.getDrinkPrice(1));
+  }
+
+  @Test
+  public void getEntertainmentPrice_changeEntertainmentPrice_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 600;
+    assertEquals(expectedOutput, testEvent.getEntertainmentPrice(3));
   }
 }
