@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class Event {
   private int mGuest;
-
+  private Integer mFoodPrice;
+  private Integer mDrinkPrice;
+  private Integer mEntertainmentPrice;
 
   public Event(int guest){
     mGuest = guest;
@@ -25,7 +27,7 @@ public class Event {
     } else if ( foodOptions[foodIndex].equals("ice cream sundaes") ) {
       return foodPrice += mGuest * 6;
     }
-    return foodPrice;
+    return mFoodPrice;
   }
 
   public Integer getDrinkPrice(int drinkIndex) {
@@ -39,7 +41,7 @@ public class Event {
     } else if ( drinkOptions[drinkIndex].equals("cocktails") ) {
       return drinkPrice += mGuest * 18;
     }
-    return drinkPrice;
+    return mDrinkPrice;
   }
 
   public Integer getEntertainmentPrice(int entertainmentIndex) {
@@ -55,6 +57,12 @@ public class Event {
     } else if ( entertainmentOptions[entertainmentIndex].equals("petting zoo") ) {
       return entertainmentPrice += 600;
     }
-    return entertainmentPrice;
+    return mEntertainmentPrice;
+  }
+
+  public Integer getPartyPrice(int foodIndex, int drinkIndex, int entertainmentIndex){
+    Integer partyPrice = 0;
+    partyPrice += getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex);
+    return partyPrice;
   }
 }
