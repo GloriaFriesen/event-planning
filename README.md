@@ -22,14 +22,13 @@ This Java application allows the user to build a party based on number of guests
 |Behavior|Input|Output|
 |:---:|:---:|:---:|
 |Application instantiates Event class|event|true|
-|Application accesses guest property|15|15|
-|Application accesses food property|burrito bar|burrito bar|
-|Application accesses drink property|beer and wine|beer and wine|
-|Application accesses entertainment property|petting zoo|petting zoo|
-|Application calculates cost based on food per person|20, burrito bar|160|
-|Application calculates cost based on drinks per person|20, beer and wine|240|
-|Application calculates cost based on entertainment choice|petting zoo|600|
-|Application calculates cost based on all chosen properties|20, burrito bar, beer and wine, petting zoo|1000|
+|Application accesses guest property|20|20|
+|Application calculates price based on food option|burrito bar|200|
+|Application calculates price based on drink option|beer and wine|240|
+|Application calculates price based on entertainment option|petting zoo|600|
+|Application calculates value of coupon code|"iHaveACouponCode"|-50|
+|Application calculates value of another coupon code that requires a minimum number of guests|"letsgetthispartystarted"|-150|
+|Application calculates cost based on all chosen properties|20, burrito bar, beer and wine, petting zoo, "iHaveACoupon"|990|
 
 
 ## Known Bugs
