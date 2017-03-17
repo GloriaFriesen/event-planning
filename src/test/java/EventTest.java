@@ -19,10 +19,16 @@ public class EventTest {
   }
 
   @Test
-  public void getPrice_changePriceFoodChoice_Integer(){
+  public void getFoodPrice_changePriceFoodChoice_Integer(){
     Event testEvent = new Event(20);
     Integer expectedOutput = 20 * 10;
-    assertEquals(expectedOutput, testEvent.getPrice(1));
+    assertEquals(expectedOutput, testEvent.getFoodPrice(1));
   }
 
+  @Test
+  public void getDrinkPrice_changeDrinkPriceChoice_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 20 * 12;
+    assertEquals(expectedOutput, testEvent.getDrinkPrice(1));
+  }
 }
