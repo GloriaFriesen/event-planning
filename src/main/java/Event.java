@@ -34,11 +34,11 @@ public class Event {
 
   public Integer getDrinkPrice(int drinkIndex) {
     Integer drinkPrice = 0;
-    String[] drinkOptions = {"coffee", "beer", "cocktails"};
+    String[] drinkOptions = {"coffee", "beer and wine", "cocktails"};
 
     if ( drinkOptions[drinkIndex].equals("coffee") ) {
       return drinkPrice += mGuest * 4;
-    } else if ( drinkOptions[drinkIndex].equals("beer") ) {
+    } else if ( drinkOptions[drinkIndex].equals("beer and wine") ) {
       return drinkPrice += mGuest * 12;
     } else if ( drinkOptions[drinkIndex].equals("cocktails") ) {
       return drinkPrice += mGuest * 18;
