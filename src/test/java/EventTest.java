@@ -43,6 +43,20 @@ public class EventTest {
   public void calculatePartyPrice_findPartyPrice_Integer(){
     Event testEvent = new Event(20);
     Integer expectedOutput = 1040;
-    assertEquals(expectedOutput, testEvent.getPartyPrice(1, 1, 3));
+    assertEquals(expectedOutput, testEvent.calculatePartyPrice(1, 1, 3));
+  }
+
+  @Test
+  public void getCoupon_findCouponValue_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = -50;
+    assertEquals(expectedOutput, testEvent.getCoupon("iHaveACoupon"));
+  }
+
+  @Test
+  public void getCoupon_findSecondCouponValue_Integer() {
+    Event testEvent = new Event(75);
+    Integer expectedOutput = -150;
+    assertEquals(expectedOutput, testEvent.getCoupon("letsgetthispartystarted"));
   }
 }
