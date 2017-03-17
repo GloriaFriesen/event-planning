@@ -1,5 +1,8 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EventTest {
 
@@ -14,4 +17,12 @@ public class EventTest {
     Event testEvent = new Event(20);
     assertEquals(20, testEvent.getGuest());
   }
+
+  @Test
+  public void getPrice_changePriceFoodChoice_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 20 * 10;
+    assertEquals(expectedOutput, testEvent.getPrice(1));
+  }
+
 }
