@@ -49,7 +49,7 @@ public class App {
         entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
       }
 
-      Integer partyPrice = newEvent.calculatePartyPrice(foodIndex, drinkIndex, entertainmentIndex);
+      Integer partyPrice = newEvent.getPartyPrice(foodIndex, drinkIndex, entertainmentIndex);
 
       System.out.println("Here's the price for your priceless entertainment: " + entertainmentPrice + "\n" + "You are sure to impress with this party, but it's going to cost you. Here's your total: " + partyPrice);
 

@@ -21,8 +21,8 @@ public class EventTest {
   @Test
   public void getFoodPrice_findFoodPrice_Integer(){
     Event testEvent = new Event(20);
-    Integer expectedOutput = 20 * 10;
-    assertEquals(expectedOutput, testEvent.getFoodPrice(1));
+    Integer expectedOutput = 20 * 8;
+    assertEquals(expectedOutput, testEvent.getFoodPrice(0));
   }
 
   @Test
@@ -37,6 +37,13 @@ public class EventTest {
     Event testEvent = new Event(20);
     Integer expectedOutput = 600;
     assertEquals(expectedOutput, testEvent.getEntertainmentPrice(3));
+  }
+
+  @Test
+  public void getPartyPrice_findPartyPrice_Integer(){
+    Event testEvent = new Event(20);
+    Integer expectedOutput = 1000;
+    assertEquals(expectedOutput, testEvent.getPartyPrice(0, 1, 3));
   }
 
   @Test

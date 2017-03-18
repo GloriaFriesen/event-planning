@@ -62,6 +62,12 @@ public class Event {
     return mEntertainmentPrice;
   }
 
+  public Integer getPartyPrice(int foodIndex, int drinkIndex, int entertainmentIndex){
+    Integer partyPrice = 0;
+    partyPrice = getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex);
+    return partyPrice;
+  }
+
   public Integer getCoupon(String couponCode) {
     if ( couponCode.equals("iHaveACoupon") ) {
       mCoupon = -50;
@@ -72,12 +78,6 @@ public class Event {
       return mCoupon;
     }
     return mCoupon;
-  }
-
-  public Integer calculatePartyPrice(int foodIndex, int drinkIndex, int entertainmentIndex){
-    Integer partyPrice = 0;
-    partyPrice += getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex);
-    return mPartyPrice;
   }
 
   public Integer calculateDiscountedPrice(int foodIndex, int drinkIndex, int entertainmentIndex, String couponCode) {
