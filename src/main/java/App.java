@@ -33,18 +33,10 @@ public class App {
         drinkPrice = newEvent.getDrinkPrice(drinkIndex);
       }
 
-      System.out.println("This party is really coming together. Your total for drinks: " + drinkPrice + "\n" + "What's a party without kickass entertainment? It's lame, so pick an option:" + "\n" + "1: A Magician Named Gob" + "\n" + "2: DJ Jazzy Jeff" + "\n" + "3: Who Doesn't Love Karaoke?" + "\n" + "4: Mother Goose's Discount Petting Zoo");
+      System.out.println("This party is really coming together. Your total for drinks: " + drinkPrice + "\n" + "What's a party without kickass entertainment? Pick an option:" + "\n" + "1: Who Doesn't Love Karaoke?" + "\n" + "2: A Magician Named Gob" + "\n" + "3: DJ Jazzy Jeff" + "\n" + "4: Mother Goose's Discount Petting Zoo");
       int entertainmentIndex = Integer.parseInt(myConsole.readLine()) - 1;
       Integer entertainmentPrice = 0;
-      if (entertainmentIndex == 0) {
-        entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
-      } else if (entertainmentIndex == 1) {
-        entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
-      } else if (entertainmentIndex == 2) {
-        entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
-      } else if (entertainmentIndex == 3) {
-        entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
-      }
+      entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
 
       Integer partyPrice = newEvent.getPartyPrice(foodIndex, drinkIndex, entertainmentIndex);
 
