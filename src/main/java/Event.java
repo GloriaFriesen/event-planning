@@ -48,18 +48,12 @@ public class Event {
 
   public Integer getEntertainmentPrice(int entertainmentIndex) {
     Integer entertainmentPrice = 0;
-    String[] entertainmentOptions = {"magician", "dj", "karaoke", "petting zoo"};
+    String[] entertainmentOptions = {"karaoke", "magician", "dj", "petting zoo"};
 
-    if ( entertainmentOptions[entertainmentIndex].equals("magician") ) {
-      return entertainmentPrice += 200;
-    } else if ( entertainmentOptions[entertainmentIndex].equals("dj") ) {
-      return entertainmentPrice += 450;
-    } else if ( entertainmentOptions[entertainmentIndex].equals("karaoke") ) {
-      return entertainmentPrice += 50;
-    } else if ( entertainmentOptions[entertainmentIndex].equals("petting zoo") ) {
-      return entertainmentPrice += 600;
+    for (int i = 0; i <= entertainmentIndex; i++) {
+      entertainmentPrice += 150;
     }
-    return mEntertainmentPrice;
+    return entertainmentPrice;
   }
 
   public Integer getPartyPrice(int foodIndex, int drinkIndex, int entertainmentIndex){
