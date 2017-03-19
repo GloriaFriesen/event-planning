@@ -69,9 +69,10 @@ public class Event {
   }
 
   public Integer getCoupon(String couponCode) {
+    mCoupon = 0;
     if ( couponCode.equals("iHaveACoupon") ) {
       mCoupon = -50;
-    } if ( couponCode.equals("letsgetthispartystarted") ) {
+    } else if ( couponCode.equals("letsgetthispartystarted") ) {
       if ( mGuest >= 75 ) {
         mCoupon = -150;
       }
