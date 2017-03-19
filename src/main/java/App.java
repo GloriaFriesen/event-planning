@@ -51,8 +51,24 @@ public class App {
 
       Integer partyPrice = newEvent.getPartyPrice(foodIndex, drinkIndex, entertainmentIndex);
 
-      System.out.println("Here's the price for your priceless entertainment: " + entertainmentPrice + "\n" + "You are sure to impress with this party, but it's going to cost you. Here's your total: " + partyPrice);
+      System.out.println("Here's the price for your priceless entertainment: " + entertainmentPrice + "\n" + "You are sure to impress with this party, but it's going to cost you. Here's your total: " + partyPrice + "\n" + "Do you have any coupon codes you would like to apply?" + "\n" + "Y or N");
 
+      String hasCoupon = myConsole.readLine();
+      if ( hasCoupon.equals("Y") ) {
+        System.out.println("Enter coupon code: ");
+        String userCouponCode = myConsole.readLine();
+        Integer discountPartyPrice = newEvent.calculateDiscountedPrice(foodIndex, drinkIndex, entertainmentIndex, userCouponCode);
+        if ( newEvent.getCoupon(userCouponCode) == 0 ) {
+          System.out.println("Looks like we were not able to apply your coupon. " + "Your total remains: " + partyPrice);
+        } else {
+          System.out.println("Perfect, we deducted your coupon." + "\n" + "Your new total: " + discountPartyPrice);
+        }
+      }
+      System.out.println("OK, then your total price for this fabulous party is: " + partyPrice + "\n" + "Would you like to book another party?" + "\n" + "Y or N");
+      String anotherParty = myConsole.readLine();
+      if ( anotherParty.equals("N") ) {
+        programRunning = false;
+      }
     }
   }
 }
