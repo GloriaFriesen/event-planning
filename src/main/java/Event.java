@@ -35,15 +35,10 @@ public class Event {
   public Integer getDrinkPrice(int drinkIndex) {
     Integer drinkPrice = 0;
     String[] drinkOptions = {"coffee", "beer and wine", "cocktails"};
-
-    if ( drinkOptions[drinkIndex].equals("coffee") ) {
-      return drinkPrice += mGuest * 4;
-    } else if ( drinkOptions[drinkIndex].equals("beer and wine") ) {
-      return drinkPrice += mGuest * 12;
-    } else if ( drinkOptions[drinkIndex].equals("cocktails") ) {
-      return drinkPrice += mGuest * 18;
+    for (int i=0; i <= drinkIndex; i++) {
+      drinkPrice += mGuest * 5;
     }
-    return mDrinkPrice;
+    return drinkPrice;
   }
 
   public Integer getEntertainmentPrice(int entertainmentIndex) {

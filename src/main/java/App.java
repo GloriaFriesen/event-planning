@@ -23,17 +23,13 @@ public class App {
       }
 
       System.out.println("Wise choice. Your food total: " + foodPrice + "\n" + "Now I need to know what kind of beverages you would like, choose from the following:" + "\n" + "1: Budget and Family Friendly with Coffee, Tea, and Juice" + "\n" + "2: Keep it Loose with Beer and Wine" + "\n" + "3: I Like to Party Hard so Bring on the Hard Alcohol");
+
       int drinkIndex = Integer.parseInt(myConsole.readLine()) - 1;
       Integer drinkPrice = 0;
-      if (drinkIndex == 0) {
-        drinkPrice = newEvent.getDrinkPrice(drinkIndex);
-      } else if (drinkIndex == 1) {
-        drinkPrice = newEvent.getDrinkPrice(drinkIndex);
-      } else if (drinkIndex == 2) {
-        drinkPrice = newEvent.getDrinkPrice(drinkIndex);
-      }
+      drinkPrice = newEvent.getDrinkPrice(drinkIndex);
 
       System.out.println("This party is really coming together. Your total for drinks: " + drinkPrice + "\n" + "What's a party without kickass entertainment? Pick an option:" + "\n" + "1: Who Doesn't Love Karaoke?" + "\n" + "2: A Magician Named Gob" + "\n" + "3: DJ Jazzy Jeff" + "\n" + "4: Mother Goose's Discount Petting Zoo");
+      
       int entertainmentIndex = Integer.parseInt(myConsole.readLine()) - 1;
       Integer entertainmentPrice = 0;
       entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);
