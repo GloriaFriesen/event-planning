@@ -7,7 +7,7 @@ public class App {
     boolean programRunning = true;
 
     while(programRunning) {
-      System.out.println("So I hear you are planning a party and need my services." + "\n" + "I'll need some details about your event, then I will give you an estimate" + "\n" + "First, how many guests are you anticipating?");
+      System.out.println("-----------------------------" + "\n" + "So I hear you are planning a party and need my services." + "\n" + "I'll need some details about your event, then I will give you an estimate" + "\n" + "First, how many guests are you anticipating?");
 
       Event newEvent = new Event(Integer.parseInt(myConsole.readLine()));
 
@@ -44,7 +44,7 @@ public class App {
           System.out.println("Perfect, we deducted your coupon." + "\n" + "Your new total: " + discountPartyPrice);
         }
       }
-      System.out.println("OK, then your total price for this fabulous party is: " + partyPrice + "\n" + "Would you like to book another party?" + "\n" + "Y or N");
+      System.out.println("-----------------------------" + "\n" + "Would you like to book another party?" + "\n" + "Y or N");
       if ( myConsole.readLine().equals("N") ) {
         programRunning = false;
       }
