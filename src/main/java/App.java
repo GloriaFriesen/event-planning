@@ -11,16 +11,11 @@ public class App {
 
       Event newEvent = new Event(Integer.parseInt(myConsole.readLine()));
 
-      System.out.println("Got it. You will be having " + newEvent.getGuest() + " guests at your shindig." + "\n" + "Next, please choose from the following food options:" + "\n" + "1: Build Your Own Burrito Bar" + "\n" + "2: Let's Get This Pizza Party Started" + "\n" + "3: You Scream, I Scream for Ice Cream Sundaes");
+      System.out.println("Got it. You will be having " + newEvent.getGuest() + " guests at your shindig." + "\n" + "Next, please choose from the following food options:" + "\n" + "1: You Scream, I Scream for Ice Cream Sundaes" + "\n" + "2: Let's Get This Pizza Party Started" + "\n" + "3: Build Your Own Burrito Bar");
+
       int foodIndex = Integer.parseInt(myConsole.readLine()) - 1;
       Integer foodPrice = 0;
-      if (foodIndex == 0) {
-        foodPrice = newEvent.getFoodPrice(foodIndex);
-      } else if (foodIndex == 1) {
-        foodPrice = newEvent.getFoodPrice(foodIndex);
-      } else if (foodIndex == 2) {
-        foodPrice = newEvent.getFoodPrice(foodIndex);
-      }
+      foodPrice = newEvent.getFoodPrice(foodIndex);
 
       System.out.println("Wise choice. Your food total: " + foodPrice + "\n" + "Now I need to know what kind of beverages you would like, choose from the following:" + "\n" + "1: Budget and Family Friendly with Coffee, Tea, and Juice" + "\n" + "2: Keep it Loose with Beer and Wine" + "\n" + "3: I Like to Party Hard so Bring on the Hard Alcohol");
 
@@ -29,7 +24,7 @@ public class App {
       drinkPrice = newEvent.getDrinkPrice(drinkIndex);
 
       System.out.println("This party is really coming together. Your total for drinks: " + drinkPrice + "\n" + "What's a party without kickass entertainment? Pick an option:" + "\n" + "1: Who Doesn't Love Karaoke?" + "\n" + "2: A Magician Named Gob" + "\n" + "3: DJ Jazzy Jeff" + "\n" + "4: Mother Goose's Discount Petting Zoo");
-      
+
       int entertainmentIndex = Integer.parseInt(myConsole.readLine()) - 1;
       Integer entertainmentPrice = 0;
       entertainmentPrice = newEvent.getEntertainmentPrice(entertainmentIndex);

@@ -20,16 +20,11 @@ public class Event {
 
   public Integer getFoodPrice(int foodIndex) {
     Integer foodPrice = 0;
-    String[] foodOptions = {"burrito bar", "pizza party", "ice cream sundaes"};
-
-    if ( foodOptions[foodIndex].equals("burrito bar") ) {
-      return foodPrice += mGuest * 8;
-    } else if ( foodOptions[foodIndex].equals("pizza party") ) {
-      return foodPrice += mGuest * 10;
-    } else if ( foodOptions[foodIndex].equals("ice cream sundaes") ) {
-      return foodPrice += mGuest * 6;
+    String[] foodOptions = {"ice cream sundaes", "pizza party", "burrito bar"};
+    for (int i=0; i <= foodIndex; i++) {
+      foodPrice += mGuest * 5;
     }
-    return mFoodPrice;
+    return foodPrice;
   }
 
   public Integer getDrinkPrice(int drinkIndex) {
@@ -71,8 +66,8 @@ public class Event {
   }
 
   public Integer calculateDiscountedPrice(int foodIndex, int drinkIndex, int entertainmentIndex, String couponCode) {
-    Integer partyPriceDiscounted = 0;
-    partyPriceDiscounted = getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex) + getCoupon(couponCode);
-    return partyPriceDiscounted;
+    Integer discountPartyPrice = 0;
+    discountPartyPrice = getFoodPrice(foodIndex) + getDrinkPrice(drinkIndex) + getEntertainmentPrice(entertainmentIndex) + getCoupon(couponCode);
+    return discountPartyPrice;
   }
 }
