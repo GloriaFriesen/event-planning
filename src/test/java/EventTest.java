@@ -21,14 +21,14 @@ public class EventTest {
   @Test
   public void getFoodPrice_findFoodPrice_Integer(){
     Event testEvent = new Event(20);
-    Integer expectedOutput = 20 * 8;
-    assertEquals(expectedOutput, testEvent.getFoodPrice(0));
+    Integer expectedOutput = (20 * 5) * 3;
+    assertEquals(expectedOutput, testEvent.getFoodPrice(2));
   }
 
   @Test
   public void getDrinkPrice_findDrinkPrice_Integer(){
     Event testEvent = new Event(20);
-    Integer expectedOutput = 20 * 12;
+    Integer expectedOutput = (20 * 5) * 2;
     assertEquals(expectedOutput, testEvent.getDrinkPrice(1));
   }
 
@@ -42,8 +42,8 @@ public class EventTest {
   @Test
   public void getPartyPrice_findPartyPrice_Integer(){
     Event testEvent = new Event(20);
-    Integer expectedOutput = 1000;
-    assertEquals(expectedOutput, testEvent.getPartyPrice(0, 1, 3));
+    Integer expectedOutput = 300 + 200 + 600;
+    assertEquals(expectedOutput, testEvent.getPartyPrice(2, 1, 3));
   }
 
   @Test
@@ -63,7 +63,7 @@ public class EventTest {
   @Test
   public void calculateDiscountedPrice_findPartyPricewithCoupon_Integer(){
     Event testEvent = new Event (20);
-    Integer expectedOutput = 990;
+    Integer expectedOutput = 950;
     assertEquals(expectedOutput, testEvent.calculateDiscountedPrice(1, 1, 3, "iHaveACoupon"));
   }
 }
